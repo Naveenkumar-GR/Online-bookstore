@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Online Bookstore</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1><a href="/">📚 Online Bookstore</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/cart" class="cart-link">🛒 Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="cart-section">
+            <h2>Shopping Cart</h2>
+            
+            <div id="emptyCart" class="empty-cart">
+                <p>Your cart is empty. <a href="/">Continue shopping</a></p>
+            </div>
+            
+            <div id="cartContent" style="display: none;">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Book Title</th>
+                            <th>Author</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartItems">
+                        <!-- Cart items will be loaded here -->
+                    </tbody>
+                </table>
+                
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <p>Total Items: <span id="totalItems">0</span></p>
+                    <h4>Total Price: $<span id="totalPrice">0.00</span></h4>
+                    <button onclick="proceedToCheckout()" class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Online Bookstore. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/cart.js"></script>
+</body>
+</html>
